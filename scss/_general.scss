@@ -1,0 +1,133 @@
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// ## Colors
+
+$VeryDarkGray: hsl(0, 0%, 17%);
+$DarkGray: hsl(0, 0%, 59%);
+$Wite: rgb(255, 255, 255);
+$black: black;
+
+// ### Font
+
+$font-family: 'Rubik', sans-serif;
+
+//------------html general
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 112.5%;
+  overflow-x: hidden;
+  font-family: $font-family;
+}
+
+// ---------------wrapper-----------
+.wrapper {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1440px;
+  width: 95%;
+}
+
+// ---------------wrapper-----------
+//  =============== general ===================
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 112.5%;
+  overflow-x: hidden;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+}
+
+// setup H1 and h2
+
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: $Wite;
+}
+
+// =========header =========
+
+header {
+  background-image: url(../images/pattern-bg.png);
+  background-repeat: no-repeat;
+  height: 30vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.header {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+// =========================
+
+// ============form===============
+
+form {
+  margin: 0 auto;
+  width: 70%;
+  text-align: center;
+}
+input {
+  width: 50%;
+  border-radius: 13px 0 0 13px;
+  height: 50px;
+  padding-top: 5px;
+  padding-left: 15px;
+  border: none;
+}
+
+button {
+  width: 6%;
+  border-radius: 0 13px 13px 0;
+  height: 50px;
+  padding-top: 5px;
+  padding-left: 15px;
+  border: none;
+  background-color: black;
+  margin-left: -5px;
+  padding-right: 11px;
+}
+
+// =========================
+
+footer {
+  position: relative;
+}
+.attribution {
+  padding-bottom: 10px;
+  position: relative;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+  height: 29px;
+  width: 100%;
+  margin: 0 auto;
+  top: 70vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+// =============MAP===========
+#map {
+  height: 60vh;
+  width: 100%;
+}
