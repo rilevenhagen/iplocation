@@ -1,15 +1,13 @@
 // ============== select button
 
 const secretApi = 'ENTER_YOUR_API';
-const apiURL = `https://geo.ipify.org/api/v2/country,city?apiKey=at_nKnn0NlBAFTtFBvqDWfpJpcb5UUom`;
+// const apiURL = `https://geo.ipify.org/api/v2/country,city?apiKey=at_ID7CHZ9xEawE7MUsyUHYHzFcZ3QqJ&`;
 const button = document.querySelector('button');
 let inputVal = document.querySelector('input');
 const locationEl = document.querySelector('.location');
 const IpEl = document.querySelector('.IP-Address');
 const utcEl = document.querySelector('.timezone');
 const ipsEl = document.querySelector('.ips');
-
-
 
 // ============== clean input field
 
@@ -34,69 +32,43 @@ tiles.addTo(myMap)
 
 
 
+upDateFirstLoad = (upData = [-21.586772, -44.559879]) => {
 
+tiles.addTo(myMap)
+ L.map('map').setView(upData, 13)
+  L.marker(upData).addTo(map)
+}
 
-// upDateFirstLoad = (upData) => {
-//  L.map('map').setView(upData, 13)
-//   L.marker(upData).addTo(map)
-// }
+upDateFirstLoad()
 
-async function ipSerach(input) {
-  if(input === undefined && input === "" && input === null ){
-    url = `${apiURL}&ipAddress=${secretApi}`
-  } url = `${apiURL}&ipAddress=${input}`
- fetch(url, /*{cache: "no-cache"}*/)
-    .then(response => response.json())
-    .then(data =>  console.log(data),
-    ) .catch(error => {
-    alert(error, '🤪something went wrong, try again with a valid IP address🤪')
-    })
-  }
-ipSerach()
+// async function ipSearch(input) {
+  
+// const myIP = await fetch('https://api.ipify.org/?format=json').then(response => response.json()).then( data => {return data.ip}
+// )
+
+//   if(input === undefined || input === " " || input === null ){
+//     url = `${apiURL}&ipAddress=${myIP}`
+//   } else url = `${apiURL}&ipAddress=${input}`
+//  fetch(url)
+//     .then(response => response.json())
+//     .then(data => {IpEl.innerHTML = `${data.ip}`, 
+// locationEl.innerHTML = `${data.location['city']}, ${data.location['region']}`
+// ipsEl.innerHTML = `${data['isp']}`
+// utcEl.innerHTML = `${data.location['timezone']}`
+// console.log(data)
+// // upDateFirstLoad(data.location['lat'], data.location['lng'])
+// }).catch(error => {
+//     alert(error, '🤪something went wrong, try again with a valid IP address🤪')
+//     })
+//   }
+// ipSearch()
+
 
 
 button.addEventListener('click', e =>{
   e.preventDefault();
   inputVal = document.querySelector('input').value
-  return ipSerach(inputVal)
+  return ipSearch(inputVal), empty()
 })
 
-// ============= get the IP
-// getIP = (defaultIp) => {
-//   if(defaultIp != undefined){
-//       url = `${apiURL}&ipAddress=${defaultIp}`
-//   }   /*url = `${apiURL}&ipAddress=76.71.116.77`*/
-// console.log(url)
-//   fetch(url, /*{cache: "no-cache"}*/)
-//     .then(response => response.json())
-//     .then(data => {
-//   IpEl.innerHTML = 
-//   `<p>${data['ip']}</p>`, locationEl.innerHTML = `<p>${data.location['city']}, ${data.location['region']}</p>`, utcEl.innerHTML = `<p>UTC  /-/ ${data.location['timezone']} </p>`, ipsEl.innerHTML = `<p>${data['isp']} </p>`
-
-// console.log([data.location.lat, data.location.lng])
-// console.log(data)
-//     },
-//     ) .catch(error => {
-//     alert(error, '🤪something went wrong, try again with a valid IP address🤪')
-//     });
-//     // empty()
-// }
-
-
-
-// button.addEventListener('click', e =>{
-//   // e.preventDefault();
-//   let ipClient = inputVal
-//   return console.log(ipClient)
-// //   if(inputVal != '' && inputVal != null ){
-// //     getIP(inputVal)
-// //   }
-// //   alert('try again with a valid IP address')
-// // console.log(inputVal)
-
-// });
-
-// getIP(inputVal)
-
-// // getIP()
 

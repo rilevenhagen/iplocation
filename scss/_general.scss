@@ -49,6 +49,22 @@ h1 {
   font-weight: 400;
   color: $Wite;
 }
+h2{
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: $DarkGray;
+  text-align: start;
+  margin-left: 12px;
+}
+
+p{
+font-size: 1.2rem;
+font-weight: 700;
+text-align: start;
+margin-left: 12px;
+margin-top: 2px;
+margin-bottom: 1px;
+}
 
 // =========header =========
 
@@ -72,6 +88,40 @@ header {
 }
 
 // =========================
+main{
+  position: relative;
+}
+.main-container{
+  position: absolute;
+  z-index: 20;
+  bottom: 480px;
+  left: 0;
+right: 0;
+}
+.container{
+  display: flex;
+  flex-direction: revert;
+  width: 71%;
+  height: 146px;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  margin: 0 auto;
+  // position:absolute;
+  background-color: $Wite;
+  border-radius: 30px;
+}
+
+// =============MAP===========
+#map {
+  height: 60vh;
+  width: 100%;
+  z-index: 2;
+}
+
+.map{
+  position: relative;
+}
 
 // ============form===============
 
@@ -109,13 +159,12 @@ footer {
 .attribution {
   padding-bottom: 10px;
   position: relative;
-  bottom: 0;
+  bottom: -40px;
   font-size: 11px;
   text-align: center;
   height: 29px;
   width: 100%;
   margin: 0 auto;
-  top: 70vh;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -126,8 +175,11 @@ footer {
   color: hsl(228, 45%, 44%);
 }
 
-// =============MAP===========
-#map {
-  height: 60vh;
-  width: 100%;
+// ===========lines================
+
+.data{
+  width: 20%;
+border-left: 0.2rem $DarkGray solid;
+max-height: 65%;
 }
+
