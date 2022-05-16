@@ -1,7 +1,7 @@
 // ============== select button
 
 const secretApi = 'ENTER_YOUR_API';
-// const apiURL = `https://geo.ipify.org/api/v2/country,city?apiKey=at_ID7CHZ9xEawE7MUsyUHYHzFcZ3QqJ&`;
+//  const apiURL = `https://geo.ipify.org/api/v2/country,city?apiKey=at_ID7CHZ9xEawE7MUsyUHYHzFcZ3QqJ&`;
 const button = document.querySelector('button');
 let inputVal = document.querySelector('input');
 const locationEl = document.querySelector('.location');
@@ -19,7 +19,9 @@ function empty() {
 //=============get the map api
 
 // 'center':[-21.586772, -44.559879],
-const myMap = L.map('map').setView([-21.586772, -44.559879], 6);
+let myMap = L.map('map').setView([-21.586772, -44.559879], 3);
+
+let marker = L.marker([-21.586772, -44.559879]);
 
 const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
@@ -30,16 +32,23 @@ const tiles = L.tileLayer(tileURL, { attribution });
 tiles.addTo(myMap)
 
 
+// // map = L.map('mapa').setView([lat, lon], 15);
+// let myIcon = L.icon({
+//     iconUrl: '/images/icon-location.svg',
+//     iconSize: [38, 95],
+//     iconAnchor: [22, 94],
+// });
 
 
-upDateFirstLoad = (upData = [-21.586772, -44.559879]) => {
 
-tiles.addTo(myMap)
- L.map('map').setView(upData, 13)
-  L.marker(upData).addTo(map)
-}
+// marker.addTo(myMap,{ icon: myIcon });
 
-upDateFirstLoad()
+
+
+
+
+
+// upDateFirstLoad()
 
 // async function ipSearch(input) {
   
@@ -56,19 +65,30 @@ upDateFirstLoad()
 // ipsEl.innerHTML = `${data['isp']}`
 // utcEl.innerHTML = `${data.location['timezone']}`
 // console.log(data)
-// // upDateFirstLoad(data.location['lat'], data.location['lng'])
+// // upDateFirstLoad()
+// // data.location['lat'], data.location['lng']
 // }).catch(error => {
 //     alert(error, '🤪something went wrong, try again with a valid IP address🤪')
 //     })
 //   }
 // ipSearch()
 
+// upDateFirstLoad = (test = [lat, lon]) => {
+// myMap = L.map('map').setView(test, 1)
+// marker = L.marker(test).addTo(myMap)
+// }
 
-
-button.addEventListener('click', e =>{
+button.addEventListener('click', async e =>{
   e.preventDefault();
-  inputVal = document.querySelector('input').value
-  return ipSearch(inputVal), empty()
+  console.log(myMap)
+//  let container = L.DomUtil.get('map');
+//       if(container != null){
+//         container._leaflet_id = null;
+//       }
+  upDateFirstLoad(-21.978906553176262, -44.92753744125367)
+  // inputVal = document.querySelector('input').value
+  // return ipSearch(inputVal), empty()
+  
 })
 
 
