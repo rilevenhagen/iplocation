@@ -58,12 +58,12 @@ h2{
 }
 
 p{
-font-size: 1.2rem;
-font-weight: 700;
-text-align: start;
-margin-left: 12px;
-margin-top: 2px;
-margin-bottom: 1px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: start;
+  margin-left: 12px;
+  margin-top: 2px;
+  margin-bottom: 1px;
 }
 
 // =========header =========
@@ -94,9 +94,9 @@ main{
 .main-container{
   position: absolute;
   z-index: 20;
-  bottom: 480px;
+  // bottom: 480px;
   left: 0;
-right: 0;
+  right: 0;
 }
 .container{
   display: flex;
@@ -110,13 +110,18 @@ right: 0;
   // position:absolute;
   background-color: $Wite;
   border-radius: 30px;
+  z-index: 30;
+  position: relative;
+  top: -71px;
 }
 
 // =============MAP===========
 #map {
+  // height: 180px;
   height: 60vh;
   width: 100%;
   z-index: 2;
+  margin-top: -147px;
 }
 
 .map{
@@ -169,6 +174,7 @@ footer {
   justify-content: center;
   align-content: center;
   align-items: center;
+  top: 63vh;
 }
 
 .attribution a {
@@ -179,7 +185,8 @@ footer {
 
 .data{
   width: 20%;
-border-left: 0.2rem $DarkGray solid;
-max-height: 65%;
+  border-left: 0.2rem $DarkGray solid;
+  max-height: 65%;
+  margin-left: 21px;
 }
 

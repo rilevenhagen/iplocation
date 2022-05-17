@@ -337,7 +337,6 @@ main {
 .main-container {
   position: absolute;
   z-index: 20;
-  bottom: 480px;
   left: 0;
   right: 0;
 }
@@ -353,12 +352,16 @@ main {
   margin: 0 auto;
   background-color: rgb(255, 255, 255);
   border-radius: 30px;
+  z-index: 30;
+  position: relative;
+  top: -71px;
 }
 
 #map {
   height: 60vh;
   width: 100%;
   z-index: 2;
+  margin-top: -147px;
 }
 
 .map {
@@ -409,6 +412,7 @@ footer {
   justify-content: center;
   align-content: center;
   align-items: center;
+  top: 63vh;
 }
 
 .attribution a {
@@ -419,4 +423,5 @@ footer {
   width: 20%;
   border-left: 0.2rem hsl(0deg, 0%, 59%) solid;
   max-height: 65%;
+  margin-left: 21px;
 }/*# sourceMappingURL=styles.css.map */
