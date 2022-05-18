@@ -29,7 +29,7 @@ const tileURL =  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 const tiles = L.tileLayer(tileURL, { attribution });
 
 let myIcon = L.icon({
-    iconUrl: 'https://ip-adresstracker.netlify.app/images/icon-location.svg',
+    iconUrl: 'https://ip-address-tracker-rico.netlify.app/images/icon-location.svg',
     iconSize: [32, 38],
     iconAnchor: [22, 94],
 });
