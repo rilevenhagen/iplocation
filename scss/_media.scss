@@ -1,0 +1,46 @@
+
+@media (max-width: 737px) {
+.wrapper {
+    max-width: 737px;
+    width: 96%;
+}
+
+header {
+  height: 22vh;
+}
+
+
+
+input {
+  width: 75%;
+}
+
+button {
+  width: 13%;
+}
+
+.container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    padding-bottom: 22px;
+    width: 77%;
+    top: -176px;
+}
+ 
+#map {
+    margin-top: -355px;
+}
+
+.data{
+    border-left:none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin: 5px auto;
+padding-bottom: 5px;
+  }
+}
