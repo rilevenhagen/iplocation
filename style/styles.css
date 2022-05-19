@@ -426,6 +426,10 @@ footer {
   margin-left: 21px;
 }
 
+.data1 {
+  border-left: none;
+}
+
 @media (max-width: 737px) {
   .wrapper {
     max-width: 737px;

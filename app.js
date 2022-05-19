@@ -53,9 +53,10 @@ fetch(url)
 .then(data => {IpEl.innerHTML = `${data.ip}`, 
 locationEl.innerHTML = `${data.location['city']}, ${data.location['region']}`
 ipsEl.innerHTML = `${data['isp']}`
-utcEl.innerHTML = `${data.location['timezone']}`
+utcEl.innerHTML = `UTC ${data.location['timezone']}`
 lat = data.location['lat'],
 lng = data.location['lng']
+console.log(data)
 
 //==================load the map
 
